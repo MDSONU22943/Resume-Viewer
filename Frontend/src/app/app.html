@@ -1,0 +1,36 @@
+<div style="padding: 20px; font-family: Arial;">
+
+  <h1>AI Resume Reviewer</h1>
+
+  <input type="file" (change)="onFileSelect($event)" />
+  <br><br>
+
+  <button (click)="uploadResume()">Review Resume</button>
+
+  <h3 *ngIf="loading">Analyzing... ⏳</h3>
+
+  <div *ngIf="result">
+
+    <h2>ATS Score: {{ result.ats_score }}</h2>
+
+    <h3>Strengths:</h3>
+    <ul>
+      <li *ngFor="let s of result.strengths">{{ s }}</li>
+    </ul>
+
+    <h3>Weaknesses:</h3>
+    <ul>
+      <li *ngFor="let w of result.weaknesses">{{ w }}</li>
+    </ul>
+
+    <h3>Suggestions:</h3>
+    <ul>
+      <li *ngFor="let s of result.suggestions">{{ s }}</li>
+    </ul>
+
+    <h3>Improved Summary:</h3>
+    <p>{{ result.improved_summary }}</p>
+
+  </div>
+
+</div>
