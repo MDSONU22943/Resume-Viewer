@@ -20,14 +20,36 @@ Resume-Reviewer/
 
 ## 🚀 Features
 
-- **PDF Resume Upload**: Upload PDF files for analysis
+### Core Functionality
+- **PDF Resume Upload**: Upload PDF files for analysis with drag-and-drop support
 - **AI-Powered Analysis**: Uses Groq's language models for intelligent resume review
 - **Comprehensive Feedback**: 
   - Strengths and weaknesses analysis
   - Actionable suggestions for improvement
-  - ATS (Applicant Tracking System) compatibility score
+  - ATS (Applicant Tracking System) compatibility score with color-coded visualization
   - Improved resume summary
-- **Modern UI**: Clean and responsive Angular frontend
+- **Download Reports**: Export analysis results as text files
+
+### Modern UI/UX Features
+- **Glassmorphic Design**: Modern glassmorphism effects with backdrop blur
+- **Gradient Backgrounds**: Beautiful purple-blue gradient backgrounds
+- **Advanced Animations**: 
+  - Floating logo animation
+  - Pulsing upload icons
+  - Thinking brain animation during processing
+  - Bouncing loading dots
+  - Smooth fade-in transitions for results
+- **Interactive Elements**:
+  - Hover effects on all buttons and cards
+  - Drag-and-drop file upload with visual feedback
+  - Dynamic ATS score circle with color coding (green/yellow/red)
+  - Shimmer effects on buttons
+  - Icon animations and transformations
+- **Responsive Design**: Fully responsive layout optimized for desktop and mobile
+- **Modern Typography**: Clean fonts with gradient text effects
+- **Card-Based Layout**: Organized result cards with color-coded headers
+- **Smart Navigation**: Back button with glassmorphic design for easy navigation
+- **File Management**: File preview with size display and remove functionality
 
 ## 📋 Prerequisites
 
@@ -179,12 +201,19 @@ If you prefer running both services with a single command:
 - **pdf-parse** - PDF text extraction
 - **Groq API** - AI model integration
 - **CORS** - Cross-origin resource sharing
+- **dotenv** - Environment variable management
 
 ### Frontend
 - **Angular 20** - Frontend framework
 - **TypeScript** - Type-safe JavaScript
 - **Angular CLI** - Development tools
 - **RxJS** - Reactive programming
+- **FontAwesome 6** - Icon library
+- **Modern CSS3** - Advanced styling and animations
+- **CSS Grid & Flexbox** - Responsive layouts
+- **CSS Variables** - Custom properties for theming
+- **Backdrop Filter** - Glassmorphism effects
+- **CSS Animations** - Smooth transitions and micro-interactions
 
 ## 🐛 Troubleshooting
 
@@ -227,12 +256,59 @@ If you prefer running both services with a single command:
    npm install
    ```
 
+## 🎨 UI/UX Design
+
+### Design System
+- **Color Palette**: Purple-blue gradient theme with semantic color coding
+  - Primary: `#6366f1` (Indigo)
+  - Success: `#10b981` (Green) for strengths
+  - Warning: `#f59e0b` (Amber) for weaknesses
+  - Info: `#22d3ee` (Cyan) for suggestions
+- **Typography**: Modern sans-serif fonts with gradient text effects
+- **Spacing**: Consistent padding and margins using CSS variables
+- **Shadows**: Multi-layered shadow system for depth and hierarchy
+
+### Interactive Elements
+- **Buttons**: Glassmorphic design with shimmer effects and hover animations
+- **Cards**: Elevated cards with color-coded borders and hover transformations
+- **File Upload**: Drag-and-drop zone with visual feedback and file preview
+- **Loading States**: Animated brain icon with bouncing dots
+- **Score Visualization**: Dynamic circular progress indicators
+
+### Animations
+- **Micro-interactions**: Button hover states, icon transformations
+- **Page Transitions**: Smooth fade-in effects for results
+- **Loading Animations**: Thinking brain, bouncing dots, pulsing icons
+- **Hover Effects**: Card elevations, button scaling, icon movements
+
+### Responsive Design
+- **Mobile-First**: Optimized for devices 320px and up
+- **Breakpoints**: 768px (tablet), 480px (mobile)
+- **Flexible Grid**: CSS Grid with auto-fit for responsive card layouts
+- **Touch-Friendly**: Large tap targets and accessible interactions
+
 ## 📝 Development Notes
 
+### Backend Architecture
 - The backend uses ES6 modules (`"type": "module"` in package.json)
 - File uploads are stored temporarily in the `uploads/` directory
 - The AI model used is `openai/gpt-oss-20b` via Groq's API
 - CORS is enabled for development with the Angular frontend
+- Environment variables are managed through `.env` file
+
+### Frontend Architecture
+- **Standalone Components**: Angular 20 standalone components architecture
+- **Component Structure**: Single component architecture with embedded styles
+- **State Management**: Component-level state management with reactive properties
+- **File Handling**: Drag-and-drop with FileReader API for client-side validation
+- **Error Handling**: Comprehensive error handling with user-friendly messages
+- **Performance**: Optimized animations using CSS transforms and transitions
+
+### CSS Architecture
+- **CSS Variables**: Centralized design tokens for colors, spacing, and effects
+- **Component Scoping**: Styles scoped to components using Angular's style isolation
+- **Animation Performance**: Hardware-accelerated animations using transform and opacity
+- **Responsive Design**: Mobile-first approach with flexible grid systems
 
 ## 🤝 Contributing
 

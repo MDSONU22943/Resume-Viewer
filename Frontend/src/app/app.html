@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-      <header class="header">
+      <header class="header" *ngIf="!result">
         <div class="logo">
           <i class="fas fa-brain"></i>
           <h1>AI Resume Reviewer</h1>
@@ -16,9 +16,21 @@
         <p class="subtitle">Get instant AI-powered feedback on your resume</p>
       </header>
 
+      <!-- Results Header with Back Button -->
+      <header class="results-header-main" *ngIf="result">
+        <button class="back-btn" (click)="resetAnalysis()">
+  <span class="icon">←</span>
+  <span class="text">Back to Upload</span>
+</button>
+        <div class="logo-small">
+          <i class="fas fa-brain"></i>
+          <h2>AI Resume Reviewer</h2>
+        </div>
+      </header>
+
       <main class="main-content">
         <!-- Upload Section -->
-        <section class="upload-section" [class.has-file]="selectedFile">
+        <section class="upload-section" [class.has-file]="selectedFile" *ngIf="!result">
           <div class="upload-card">
             <div class="upload-area" 
                  [class.drag-over]="isDragOver"
