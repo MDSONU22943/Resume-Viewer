@@ -32,7 +32,7 @@ export class App {
     const formData = new FormData();
     formData.append('resume', this.selectedFile);
 
-    this.http.post('http://localhost:5000/review', formData)
+    this.http.post('https://resume-viewer-backend.onrender.com/review', formData)
       .subscribe({
         next: (res: any) => {
           console.log("API RESPONSE:",res)
