@@ -27,7 +27,7 @@ export class App {
     }
 
     this.loading = true;
-    console.log("API CAL START")
+    // console.log("API CAL START")
 
     const formData = new FormData();
     formData.append('resume', this.selectedFile);
@@ -35,7 +35,7 @@ export class App {
     this.http.post('https://resume-viewer-backend.onrender.com/review', formData)
       .subscribe({
         next: (res: any) => {
-          console.log("API RESPONSE:",res)
+          // console.log("API RESPONSE:",res)
           this.result = res.feedback;
           this.loading = false;
         },
